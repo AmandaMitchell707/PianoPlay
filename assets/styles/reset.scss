@@ -4,7 +4,7 @@ section, img, div, span {
   padding: 0;
   border: 0;
   outline: 0;
-  font: inherit;
+  font-family: inherit;
   color: inherit;
   text-align: inherit;
   text-decoration: inherit;
@@ -24,10 +24,6 @@ button {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-}
-
-body {
-  font-family: Verdana, sans-serif;
 }
 
 .group:after {
