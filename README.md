@@ -31,6 +31,6 @@
 * day 5: add record functionality
     * users can start, stop, play, and reset recording
     * users can listen to demo recordings
-* the weekend:
+* day 6:
     * polish up styling
     * deploy to heroku

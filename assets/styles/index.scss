@@ -7,3 +7,21 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+.main {
+  height: 75%;
+  width: 75%;
+  margin: auto;
+}
+
+.white-key {
+  stroke: #9f0ae4;
+  stroke-width: 2;
+  fill: aquamarine;
+}
+
+.black-key {
+  stroke: #9f0ae4;
+  stroke-width: 2;
+  fill: rgb(13, 35, 230);
+}
