@@ -26,6 +26,10 @@ button {
   cursor: pointer;
 }
 
+body {
+  font-family: Verdana, sans-serif;
+}
+
 .group:after {
   content: "";
   display: block;

@@ -1,17 +1,9 @@
-// Apply a natural box layout model to all elements
-// but allowing components to change
-// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 .main {
   height: 75%;
   width: 75%;
   margin: auto;
+  text-align: center;
+  position: relative;
 }
 
 .white-key {
@@ -24,4 +16,18 @@ html {
   stroke: #9f0ae4;
   stroke-width: 2;
   fill: rgb(13, 35, 230);
+}
+
+.key-labels {
+  position: absolute;
+  top: 80%;
+  left: 15.2%;
+  width: 862px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Courier New, monospace;
+}
+
+.key-labels div {
+  font-size: 19;
 }
