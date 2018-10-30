@@ -63,7 +63,18 @@
         <div class="key-label">U</div>
         <div class="key-label">I</div>
         <div class="key-label">O</div>
-
+      </div>
+      <div class="settings">
+        <div class="settings-left">
+          <label>Volume:<br />
+            <input type="range" min="0" max="10" step="1"
+                value="5" list="volume-options" name="volume" />
+          </label>
+          <datalist>
+            <option value="0" label="Mute">
+            <option value="10" label="100%">
+          </datalist>
+        </div>
       </div>
     </section>
   </div>
