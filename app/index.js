@@ -1,9 +1,4 @@
-/**
- * Application entry point
- */
-
-// Load application styles
-import 'styles/index.scss';
+import '../assets/styles/index.scss';
 
 let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let oscillatorList = [];
@@ -21,7 +16,7 @@ let cosineTerms = null;
 function createNoteTable() {
   let noteFreq = [];
   for (let i = 0; i < 3; i++) {
-    noteFreq[i] = {};
+    noteFreq[i] = [];
   }
 
   noteFreq[0]["F"] = 87.307057858;
@@ -55,4 +50,39 @@ function createNoteTable() {
   noteFreq[3]["A"] = 440.0;
   noteFreq[3]["A#"] = 466.163761518;
   noteFreq[3]["B"] = 493.883301256;
+}
+
+function setupKeyboard() {
+    noteFreq = createNoteTable();
+
+    volumeControl.addEventListener("change", changeVolume, false);
+
+    masterGainNode = audioContext.createGain();
+    masterGainNode.connect(audioContext.destination);
+    masterGainNode.gain.value = volumeControl.value;
+}
+
+function changeVolume(e) {
+    masterGainNode.gain.value = volumeControl.value;
+}
+
+function createWhiteKey(note, octave, freq, xValue) {
+  let keyElement = document.createElement("rect");
+
+  keyElement.className = "white-key";
+  keyElement.dataset["note"] = note;
+  keyElement.dataset["octave"] = octave;
+  keyElement.dataset["frequency"] = freq;
+
+  keyElement.x = xValue;
+  keyElement.y = 5;
+  keyElement.rx = 6;
+  keyElement.ry = 6;
+  keyElement.width = 50;
+  keyElement.height = 250;
+
+  keyElement.addEventListener("keydown", notePressed, false);
+  keyElement.addEventListener("keyup", noteReleased, false);
+
+  return keyElement;
 }
