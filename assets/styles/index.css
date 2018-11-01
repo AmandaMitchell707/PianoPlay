@@ -38,15 +38,39 @@ body {
   stroke-width: 2.5;
 }
 
-.key-labels {
+.labels {
+  font-family: Courier New, monospace;
+  display: flex;
+  justify-content: space-between;
   position: absolute;
+}
+
+.white-key-labels {
   top: 285px;
   left: 313px;
   width: 867px;
   font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  font-family: Courier New, monospace;
   font-size: 26px;
   color: #ab41dd;
+}
+
+.black-key-labels {
+  top: 195px;
+  left: 339px;
+  width: 811px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.three-set {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+}
+
+.two-set {
+  display: flex;
+  justify-content: space-between;
+  width: 63px;
 }
