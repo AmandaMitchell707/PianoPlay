@@ -1,38 +1,52 @@
+body {
+  background-color: black;
+}
+
 .main {
   width: 1500px;
   margin: auto;
   text-align: center;
   position: relative;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #ab41dd;
 }
 
 .title {
   font-size: 36px;
 }
 
-.white-key {
+.piano {
+  /* background-image: url(../images/piano_background.jpg); */
+}
+
+.key {
   stroke: #9f0ae4;
   stroke-width: 2;
-  fill: aquamarine;
+  transition: all 0.4s ease;
+}
+
+.white-key {
 }
 
 .black-key {
-  stroke: #9f0ae4;
-  stroke-width: 2;
   fill: rgb(13, 35, 230);
+}
+
+.playing {
+  transform: scale(1.01);
+  fill: white;
+  stroke-width: 2.5;
 }
 
 .key-labels {
   position: absolute;
-  top: 335px;
+  top: 285px;
   left: 313px;
   width: 867px;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   font-family: Courier New, monospace;
-}
-
-.key-label {
   font-size: 26px;
+  color: #ab41dd;
 }
