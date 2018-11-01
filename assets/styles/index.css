@@ -3,7 +3,7 @@ body {
 }
 
 .main {
-  width: 1500px;
+  width: 1000px;
   margin: auto;
   text-align: center;
   position: relative;
@@ -11,8 +11,28 @@ body {
   color: #ab41dd;
 }
 
+.logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 60px;
+}
+
+#linked-in {
+  top: 10px;
+}
+
+#github {
+  top: 50px;
+}
+
 .title {
+  padding: 20px;
   font-size: 36px;
+}
+
+.sub-title {
+  padding: 10px;
 }
 
 .piano {
@@ -46,8 +66,8 @@ body {
 }
 
 .white-key-labels {
-  top: 285px;
-  left: 313px;
+  top: 345px;
+  left: 62px;
   width: 867px;
   font-weight: 600;
   font-size: 26px;
@@ -55,8 +75,8 @@ body {
 }
 
 .black-key-labels {
-  top: 195px;
-  left: 339px;
+  top: 255px;
+  left: 89px;
   width: 811px;
   font-size: 18px;
   font-weight: 600;
