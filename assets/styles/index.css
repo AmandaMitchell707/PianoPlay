@@ -18,6 +18,10 @@ body {
   right: 60px;
 }
 
+.logo:hover {
+  transform: scale(1.1);
+}
+
 #linked-in {
   top: 10px;
 }
@@ -46,6 +50,7 @@ body {
 }
 
 .white-key {
+  fill: black;
 }
 
 .black-key {
