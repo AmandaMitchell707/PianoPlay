@@ -38,27 +38,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
   setupAudioTags(dataKeys, notes);
 
-  // let keyEnabledArray = Array(31).fill(true);
+  let keyEnabledHash = {};
 
   window.addEventListener('keydown', (e) => {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (!audio) return;
-    // if (keyEnabledArray[e.keyCode]) {
-    // keyEnabledArray[e.keyCode] = false;
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add('playing');
-
-    // }
+    if (keyEnabledHash[e.keyCode] == undefined || keyEnabledHash[e.keyCode]) {
+      keyEnabledHash[e.keyCode] = false;
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
   });
 
   window.addEventListener('keyup', (e) => {
-    keyEnabledArray[e.keyCode] = true;
+    keyEnabledHash[e.keyCode] = true;
   });
 
   function removeTransition(e) {
-    // if (e.propertyName !== 'transform') return;
     this.classList.remove('playing');
   }
 
