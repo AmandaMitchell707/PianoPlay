@@ -1,9 +1,16 @@
+
 window.addEventListener("DOMContentLoaded", () => {
+  sessionStorage.setItem('voice', 'classic');
+
+  // set voice to classic or electric from select option menu
+  document.getElementById('voiceSelector').addEventListener('change', function () {
+    let currentVoice = document.getElementById('voiceSelector').value;
+
+    sessionStorage.setItem('voice', currentVoice);
+  });
   
   const dataKeys = [90, 88, 67, 86, 65, 83, 68, 70, 71, 72, 74, 75, 76, 89, 85,
     73, 79, 80, 81, 87, 69, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48];
-
-  const srcFolders = ['classic', 'space'];
 
   const notes = ['0_f', '0_g',
     '1_a', '1_b', '1_c', '1_d', '1_e', '1_f', '1_g',
@@ -15,11 +22,13 @@ window.addEventListener("DOMContentLoaded", () => {
     '3_asharp'
   ];
 
-  function createAudioTag(key, note) {
+  let voices = ['classic', 'electric'];
+
+  function createAudioTag(key, note, voice) {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `assets/audio/classic/${note}.mp3`;
+    audioElement.src = `assets/audio/${voice}/${note}.mp3`;
 
     return audioElement;
   }
@@ -29,8 +38,10 @@ window.addEventListener("DOMContentLoaded", () => {
     audioContainer.className = 'audio-tags';
 
     for (let i = 0; i < dataKeys.length; i++) {
-      audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i]));
+      audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i], voices[0]));
+      audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i], voices[1]));
     }
+
     let body = document.querySelector("body");
     body.appendChild(audioContainer);
   }
@@ -40,7 +51,12 @@ window.addEventListener("DOMContentLoaded", () => {
   let keyEnabledHash = {};
 
   window.addEventListener('keydown', (e) => {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    let audio;
+    if (sessionStorage.voice === 'classic') {
+      audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[0];
+    } else {
+      audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[1];
+    }
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (!audio) return;
     if (keyEnabledHash[e.keyCode] == undefined || keyEnabledHash[e.keyCode]) {
