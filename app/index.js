@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-
+  
   const dataKeys = [90, 88, 67, 86, 65, 83, 68, 70, 71, 72, 74, 75, 76, 89, 85,
     73, 79, 80, 81, 87, 69, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48];
 
@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `assets/audio/classic/${note}.wav`;
+    audioElement.src = `assets/audio/classic/${note}.mp3`;
 
     return audioElement;
   }
@@ -31,7 +31,6 @@ window.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < dataKeys.length; i++) {
       audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i]));
     }
-
     let body = document.querySelector("body");
     body.appendChild(audioContainer);
   }
