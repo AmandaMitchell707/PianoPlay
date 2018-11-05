@@ -35,7 +35,8 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
-            title: appHtmlTitle
+            title: appHtmlTitle,
+            inject: false
         })
     ],
     module: {
@@ -94,5 +95,6 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    devtool: 'source-map'
 };

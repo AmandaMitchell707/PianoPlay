@@ -1,0 +1,109 @@
+body {
+  background-color: black;
+}
+
+.main {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #ab41dd;
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 60px;
+}
+
+.voice-select-container {
+  position: absolute;
+  left: 50px;
+  top: 75px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+#linked-in {
+  top: 10px;
+}
+
+#github {
+  top: 50px;
+}
+
+.title {
+  padding: 20px;
+  font-size: 36px;
+}
+
+.sub-title {
+  padding: 10px;
+}
+
+.piano {
+  /* background-image: url(../images/piano_background.jpg); */
+}
+
+.key {
+  stroke: #9f0ae4;
+  stroke-width: 2;
+  transition: all 0.4s ease;
+}
+
+.white-key {
+  fill: black;
+}
+
+.black-key {
+  fill: rgb(13, 35, 230);
+}
+
+.playing {
+  transform: scale(1.01);
+  fill: white;
+  stroke-width: 2.5;
+}
+
+.labels {
+  font-family: Courier New, monospace;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.white-key-labels {
+  top: 345px;
+  left: 62px;
+  width: 867px;
+  font-weight: 600;
+  font-size: 26px;
+  color: #ab41dd;
+}
+
+.black-key-labels {
+  top: 255px;
+  left: 89px;
+  width: 811px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.three-set {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+}
+
+.two-set {
+  display: flex;
+  justify-content: space-between;
+  width: 63px;
+}
