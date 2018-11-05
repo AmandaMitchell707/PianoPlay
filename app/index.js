@@ -1,7 +1,8 @@
-import '../assets/styles/reset.css'
-import '../assets/styles/index.css'
+import '../assets/styles/reset.scss';
+import '../assets/styles/index.scss';
 
 window.addEventListener("DOMContentLoaded", () => {
+
   sessionStorage.setItem('voice', 'classic');
 
   // set voice to classic or electric from select option menu
@@ -28,7 +29,8 @@ window.addEventListener("DOMContentLoaded", () => {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `assets/audio/${voice}/${note}.mp3`;
+    audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
+    // audioElement.src = `https://drive.google.com/drive/folders/1ME9fpO0g1yltQ1MqK3lWSUZgnsvtWgoB?usp=sharing/${note}.mp3`;
 
     return audioElement;
   }

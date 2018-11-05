@@ -1,15 +1,14 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "PianoPlay",
   "version": "4.0.0",
-  "description": "Plain webpack 4 Boilerplate with Babel, SASS and lodash on board",
-  "author": "Christoph von Gellhorn",
+  "description": "Piano Play app",
+  "author": "Amanda Mitchell",
   "license": "MIT",
-  "homepage": "https://github.com/cvgellhorn/webpack-boilerplate",
+  "homepage": "https://amandamitchell707.github.io/PianoPlay/",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js",
     "deploy": "gh-pages -d build"
-    
   },
   "repository": {
     "type": "git",
