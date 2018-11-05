@@ -9,11 +9,10 @@
 * browser displays piano keys marked with their corresponding keyboard key
 * user can use their keyboard to play the piano
 * visual effects display when keys are played
+* user can toggle the sound of the piano between regular piano, cello, and electronic keyboard sound
 * user can start, stop, play, and reset recording
-* user can toggle the sound of the piano between regular piano sound and electronic keyboard sound
 # Architecture and Technologies
 * Javascript for overall structure and logic
-* howler js for audio library
 * webpack to bundle files
 # Implementation Timeline
 * day 1:
@@ -22,7 +21,7 @@
     * create piano display
 * day 2:
     * learn how to use howler js to create necessary sound files
-    * map sound clips to keyboard keys using onkeypress event listeners
+    * map sound clips to keyboard keys using keydown event listeners
 * day 3:
     * style keyboard
     * add visual effects that will display temporarily on key press
