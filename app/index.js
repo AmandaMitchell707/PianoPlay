@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     '4_csharp', '4_dsharp', '4_fsharp', '4_gsharp', '4_asharp'
   ];
 
-  let voices = ['classic', 'cello', 'electric'];
+  let voices = ['classic', 'cello'];
 
   function createAudioTag(key, note, voice) {
     let audioElement = document.createElement('audio');
@@ -37,7 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < dataKeys.length; i++) {
       audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i], voices[0]));
       audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i], voices[1]));
-      audioContainer.appendChild(createAudioTag(dataKeys[i], notes[i], voices[2]));
     }
 
     let body = document.querySelector("body");
