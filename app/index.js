@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", () => {
   sessionStorage.setItem('voice', 'classic');
 
@@ -12,14 +11,12 @@ window.addEventListener("DOMContentLoaded", () => {
   const dataKeys = [90, 88, 67, 86, 65, 83, 68, 70, 71, 72, 74, 75, 76, 89, 85,
     73, 79, 80, 81, 87, 69, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48];
 
-  const notes = ['0_f', '0_g',
-    '1_a', '1_b', '1_c', '1_d', '1_e', '1_f', '1_g',
-    '2_a', '2_b', '2_c', '2_d', '2_e', '2_f', '2_g',
-    '3_a', '3_b',
-    '0_fsharp', '0_gsharp',
-    '1_asharp', '1_csharp', '1_dsharp', '1_fsharp', '1_gsharp',
-    '2_asharp', '2_csharp', '2_dsharp', '2_fsharp', '2_gsharp',
-    '3_asharp'
+  const notes = ['2_f', '2_g', '2_a', '2_b',
+  '3_c', '3_d', '3_e', '3_f', '3_g', '3_a', '3_b',
+  '4_c', '4_d', '4_e', '4_f', '4_g', '4_a', '4_b',
+    '2_fsharp', '2_gsharp', '2_asharp',
+    '3_csharp', '3_dsharp', '3_fsharp', '3_gsharp', '3_asharp',
+    '4_csharp', '4_dsharp', '4_fsharp', '4_gsharp', '4_asharp'
   ];
 
   let voices = ['classic', 'electric'];

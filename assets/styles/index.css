@@ -40,7 +40,7 @@ body {
 }
 
 .piano {
-  background-image: url(../images/piano_background.jpg);
+  /* background-image: url(../images/piano_background.jpg); */
 }
 
 .key {
@@ -50,7 +50,7 @@ body {
 }
 
 .white-key {
-  fill: rgba(0, 0, 0, 0);
+  fill: black;
 }
 
 .black-key {
