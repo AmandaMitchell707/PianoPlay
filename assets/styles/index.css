@@ -18,6 +18,14 @@ body {
   right: 60px;
 }
 
+.voice-select-container {
+  position: absolute;
+  left: 50px;
+  top: 75px;
+  font-weight: 600;
+  text-align: left;
+}
+
 .logo:hover {
   transform: scale(1.1);
 }
