@@ -1,3 +1,6 @@
+import '../assets/styles/reset.css'
+import '../assets/styles/index.css'
+
 window.addEventListener("DOMContentLoaded", () => {
   sessionStorage.setItem('voice', 'classic');
 
