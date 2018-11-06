@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
       audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[1];
     }
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if (!audio) return;
+    if (audio === undefined) return;
     if (keyEnabledHash[e.keyCode] == undefined || keyEnabledHash[e.keyCode]) {
       keyEnabledHash[e.keyCode] = false;
       audio.currentTime = 0;
