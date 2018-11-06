@@ -1,5 +1,5 @@
-import '../assets/styles/reset.scss';
-import '../assets/styles/index.scss';
+// import '../assets/styles/reset.scss';
+// import '../assets/styles/index.scss';
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
+    audioElement.src = `/assets/audio/${voice}/${note}.mp3`;
     // audioElement.src = `https://github.com/AmandaMitchell707/PianoPlay/blob/master/assets/audio/${voice}/${note}.mp3`
 
     return audioElement;
