@@ -3,16 +3,12 @@
   "version": "4.0.0",
   "description": "Piano Play app",
   "author": "Amanda Mitchell",
-  "license": "MIT",
   "homepage": "https://amandamitchell707.github.io/PianoPlay/",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
   },
   "dependencies": {
     "@babel/preset-env": "^7.1.0",

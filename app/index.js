@@ -1,11 +1,12 @@
 import '../assets/styles/reset.scss';
 import '../assets/styles/index.scss';
 
+
 window.addEventListener("DOMContentLoaded", () => {
 
   sessionStorage.setItem('voice', 'classic');
 
-  // set voice to classic or electric from select option menu
+  // set voice to classic or cello from select option menu
   document.getElementById('voiceSelector').addEventListener('change', function () {
     let currentVoice = document.getElementById('voiceSelector').value;
 
@@ -30,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     audioElement.dataset['key'] = key;
     audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
-    // audioElement.src = `https://drive.google.com/drive/folders/1ME9fpO0g1yltQ1MqK3lWSUZgnsvtWgoB?usp=sharing/${note}.mp3`;
+    // audioElement.src = `https://github.com/AmandaMitchell707/PianoPlay/blob/master/assets/audio/${voice}/${note}.mp3`
 
     return audioElement;
   }
