@@ -25,6 +25,8 @@ window.addEventListener("DOMContentLoaded", () => {
     '4_csharp', '4_dsharp', '4_fsharp', '4_gsharp', '4_asharp'
   ];
 
+  const blackKeyXValues = [45, 95, 145, 245, 295, 395, 445, 495, 595, 645, 745, 795, 845];
+
   let voices = ['classic', 'cello'];
 
   function createAudioTag(key, note, voice) {
@@ -61,6 +63,29 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function createBlackKey(key, xValue) {
+    let keyElement = document.createElement('rect');
+
+    keyElement.classList.add("key", "black-key");
+    keyElement.dataset["key"] = key;
+    keyElement.setAttribute("x", `${xValue}`);
+    keyElement.setAttribute("y", 5);
+    keyElement.setAttribute("rx", 6);
+    keyElement.setAttribute("ry", 6);
+    keyElement.setAttribute("width", 30);
+    keyElement.setAttribute("height", 150);
+
+    return keyElement;
+  }
+
+  function setupBlackKeys(dataKeys, xValues) {
+      let keyContainer = document.getElementById("piano");
+      debugger;
+      for (let i = 0; i < 13; i++) {
+          keyContainer.appendChild(createBlackKey(dataKeys[i + 18], xValues[i]));
+      }
+  }
+
   function setupAudioTags(dataKeys, notes) {
     let audioContainer = document.createElement('div');
     audioContainer.className = 'audio-tags';
@@ -75,6 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   setupWhiteKeys(dataKeys);
+  setupBlackKeys(dataKeys, blackKeyXValues);
   setupAudioTags(dataKeys, notes);
 
   let keyEnabledHash = {};
