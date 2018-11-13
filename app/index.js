@@ -31,17 +31,19 @@ window.addEventListener("DOMContentLoaded", () => {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `/PianoPlay/assets/audio/${voice}/${note}.mp3`;
+    audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
+    // audioElement.src = `/PianoPlay/assets/audio/${voice}/${note}.mp3`;
 
     return audioElement;
   }
   
   function createWhiteKey(key, idx) {
     let keyElement = document.createElement('rect');
+    let xValue = idx * 50 + 10;
 
     keyElement.classList.add('key', 'white-key');
     keyElement.dataset['key'] = key;
-    keyElement.setAttribute('x', idx * 50 + 10);
+    keyElement.setAttribute('x', `${xValue}`);
     keyElement.setAttribute('y', 5);
     keyElement.setAttribute('rx', 6);
     keyElement.setAttribute('ry', 6);
@@ -54,7 +56,9 @@ window.addEventListener("DOMContentLoaded", () => {
   function setupWhiteKeys(dataKeys) {
     let keyContainer = document.getElementById('piano');
 
-    
+    for (let i = 0; i < 18; i++) {
+      keyContainer.appendChild(createWhiteKey(dataKeys[i], i));
+    }
   }
 
   function setupAudioTags(dataKeys, notes) {
@@ -70,6 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
     body.appendChild(audioContainer);
   }
 
+  setupWhiteKeys(dataKeys);
   setupAudioTags(dataKeys, notes);
 
   let keyEnabledHash = {};
