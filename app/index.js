@@ -31,8 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
     let audioElement = document.createElement('audio');
 
     audioElement.dataset['key'] = key;
-    audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
-    // audioElement.src = `/PianoPlay/assets/audio/${voice}/${note}.mp3`;
+    // audioElement.src = `../assets/audio/${voice}/${note}.mp3`;
+    audioElement.src = `/PianoPlay/assets/audio/${voice}/${note}.mp3`;
 
     return audioElement;
   }
