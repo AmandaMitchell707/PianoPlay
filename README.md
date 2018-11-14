@@ -26,7 +26,6 @@ function setupWhiteKeys(dataKeys) {
     }
   }
 
-
   function setupBlackKeys(dataKeys, xValues) {
       let keyContainer = document.getElementById('piano');
       for (let i = 0; i < 13; i++) {
@@ -53,11 +52,14 @@ function setupWhiteKeys(dataKeys) {
 ```javascript
  window.addEventListener('keydown', (e) => {
     let audio;
+
     if (sessionStorage.voice === 'classic') {
       audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[0];
     } else {
+      // else voice is cello
       audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[1];
     }
+
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (audio === undefined) return;
     if (keyEnabledHash[e.keyCode] == undefined || keyEnabledHash[e.keyCode]) {
