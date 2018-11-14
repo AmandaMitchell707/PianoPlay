@@ -1,17 +1,20 @@
-## Piano Play
+# Piano Play
 
 * [Piano Play Live Site](https://amandamitchell707.github.io/PianoPlay/)
 
-# Overview
+## Screenshot
+![piano play screenshot](assets/images/piano_play_screenshot.png)
+
+## Overview
 * Welcome to Piano Play! Anyone can be a musician. This app allows users to play around on the piano and make some music!
 * Piano play displays a piano on the screen, and the user can play the piano with their keyboard or mouse.
 * Users can set the voice of the keyboard to either piano or cello.
 
-# Architecture and Technologies
+## Architecture and Technologies
 * Javascript for overall structure and logic
 * webpack to bundle files
 
-# Code Samples
+## Code Samples
 * HTML elements for all piano keys and audio files are created using JavaScript.
 
 ```javascript
@@ -65,5 +68,3 @@ function setupWhiteKeys(dataKeys) {
     }
   });
 ```
-# Screenshot
-![piano play screenshot](http://url/to/img.png)
