@@ -76,6 +76,11 @@ body {
   display: flex;
   justify-content: space-between;
   position: absolute;
+  pointer-events: none;
+}
+
+.labels > * {
+  pointer-events: none;
 }
 
 .white-key-labels {
