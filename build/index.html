@@ -1,69 +1,69 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/styles/reset.css" />
-    <link rel="stylesheet" href="assets/styles/index.css" />
-    <title>Piano Play</title>
-    <script src="./bundle.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles/reset.css" />
+  <link rel="stylesheet" href="assets/styles/index.css" />
+  <title>Piano Play</title>
+  <script src="./bundle.js"></script>
+</head>
 
-  <body>
-    <div class="content">
-      <section class="main">
-        <a href="https://www.linkedin.com/in/amanda-mitchell-91737b115/">
-          <img class="logo" id="linked-in" src="https://i.imgur.com/S218j5o.png" alt="linked-in">
-        </a>
-        <a href="https://github.com/AmandaMitchell707">
-          <img class="logo" id="github" src="https://i.imgur.com/Of2tduU.png" alt="github">
-        </a>
-        
-        <h1 class="title">Piano Play</h1>
-        <h2 class="sub-title">Use your keyboard or mouse to make some music!</h2>
-        
-        <div class="voice-select-container">
-          <label for="voiceSelector">Voice:<br />
-            <select id="voiceSelector">
-              <option value="classic">Piano</option>
-              <option value="cello">Cello</option>
-            </select>
-          </label>
+<body>
+  <div class="content">
+    <section class="main">
+      <a href="https://www.linkedin.com/in/amanda-mitchell-91737b115/">
+        <img class="logo" id="linked-in" src="https://i.imgur.com/S218j5o.png" alt="linked-in">
+      </a>
+      <a href="https://github.com/AmandaMitchell707">
+        <img class="logo" id="github" src="https://i.imgur.com/Of2tduU.png" alt="github">
+      </a>
+
+      <h1 class="title">Piano Play</h1>
+      <h2 class="sub-title">Use your keyboard or mouse to make some music!</h2>
+
+      <div class="voice-select-container">
+        <label for="voiceSelector">Voice:<br />
+          <select id="voiceSelector">
+            <option value="classic">Piano</option>
+            <option value="cello">Cello</option>
+          </select>
+        </label>
+      </div>
+
+      <svg class="piano" id="piano" width=930 height=300></svg>
+
+      <div class="labels white-key-labels"></div>
+
+      <div class="labels black-key-labels">
+        <div class="three-set">
+          <kbd>Q</kbd>
+          <kbd>W</kbd>
+          <kbd>E</kbd>
         </div>
-
-        <svg class="piano" id="piano" width=930 height=300></svg>
-
-        <div class="labels white-key-labels"></div>
-
-        <div class="labels black-key-labels">
-          <div class="three-set">
-            <kbd>Q</kbd>
-            <kbd>W</kbd>
-            <kbd>E</kbd>
-          </div>
-          <div class="two-set">
-            <kbd>1</kbd>
-            <kbd>2</kbd>
-          </div>
-          <div class="three-set">
-            <kbd>3</kbd>
-            <kbd>4</kbd>
-            <kbd>5</kbd>
-          </div>
-          <div class="two-set">
-            <kbd>6</kbd>
-            <kbd>7</kbd>
-          </div>
-          <div class="three-set">
-            <kbd>8</kbd>
-            <kbd>9</kbd>
-            <kbd>0</kbd>
-          </div>
+        <div class="two-set">
+          <kbd>1</kbd>
+          <kbd>2</kbd>
         </div>
-      </section>
-    </div>
-  </body>
+        <div class="three-set">
+          <kbd>3</kbd>
+          <kbd>4</kbd>
+          <kbd>5</kbd>
+        </div>
+        <div class="two-set">
+          <kbd>6</kbd>
+          <kbd>7</kbd>
+        </div>
+        <div class="three-set">
+          <kbd>8</kbd>
+          <kbd>9</kbd>
+          <kbd>0</kbd>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
 
 </html>
