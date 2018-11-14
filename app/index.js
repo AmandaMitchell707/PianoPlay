@@ -104,7 +104,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('keydown', (e) => {
     let audio;
-    
+
     if (sessionStorage.voice === 'classic') {
       audio = document.querySelectorAll(`audio[data-key="${e.keyCode}"]`)[0];
     } else {
@@ -150,4 +150,19 @@ window.addEventListener("DOMContentLoaded", () => {
       key.classList.add("playing");
     });
   });
+
+  let whiteKeyLabels = ['Z', 'X', 'C', 'V', 'A', 'S', 'D', 'F',
+    'G', 'H', 'J', 'K', 'L', 'Y', 'U', 'I', 'O', 'P'
+  ];
+
+  function createWhiteKeyLabels() {
+    let labelContainer = document.querySelector('.white-key-labels');
+    whiteKeyLabels.forEach(label => {
+      let labelElement = document.createElement('KBD');
+      labelElement.innerHTML = `${label}`;
+      labelContainer.appendChild(labelElement);
+    });
+  }
+
+  createWhiteKeyLabels();
 });
