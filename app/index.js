@@ -38,9 +38,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     return audioElement;
   }
+
+  var svgNS = "http://www.w3.org/2000/svg";
   
   function createWhiteKey(key, idx) {
-    let keyElement = document.createElement('rect');
+    let keyElement = document.createElementNS(svgNS, 'rect');
     let xValue = idx * 50 + 10;
 
     keyElement.classList.add('key', 'white-key');
@@ -55,16 +57,8 @@ window.addEventListener("DOMContentLoaded", () => {
     return keyElement;
   }
 
-  function setupWhiteKeys(dataKeys) {
-    let keyContainer = document.getElementById('piano');
-
-    for (let i = 0; i < 18; i++) {
-      keyContainer.appendChild(createWhiteKey(dataKeys[i], i));
-    }
-  }
-
   function createBlackKey(key, xValue) {
-    let keyElement = document.createElement('rect');
+    let keyElement = document.createElementNS(svgNS, "rect");;
 
     keyElement.classList.add("key", "black-key");
     keyElement.dataset["key"] = key;
@@ -78,9 +72,17 @@ window.addEventListener("DOMContentLoaded", () => {
     return keyElement;
   }
 
+  function setupWhiteKeys(dataKeys) {
+    let keyContainer = document.getElementById('piano');
+
+    for (let i = 0; i < 18; i++) {
+      keyContainer.appendChild(createWhiteKey(dataKeys[i], i));
+    }
+  }
+
+
   function setupBlackKeys(dataKeys, xValues) {
-      let keyContainer = document.getElementById("piano");
-      debugger;
+      let keyContainer = document.getElementById('piano');
       for (let i = 0; i < 13; i++) {
           keyContainer.appendChild(createBlackKey(dataKeys[i + 18], xValues[i]));
       }
@@ -99,9 +101,9 @@ window.addEventListener("DOMContentLoaded", () => {
     body.appendChild(audioContainer);
   }
 
+  setupAudioTags(dataKeys, notes);
   setupWhiteKeys(dataKeys);
   setupBlackKeys(dataKeys, blackKeyXValues);
-  setupAudioTags(dataKeys, notes);
 
   let keyEnabledHash = {};
 
@@ -124,6 +126,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('keyup', (e) => {
     keyEnabledHash[e.keyCode] = true;
+  });
+
+  window.addEventListener('click', (e) => {
+    console.log(e.target);
+    console.log(e.currentTarget);
   });
 
   function removeTransition(e) {
